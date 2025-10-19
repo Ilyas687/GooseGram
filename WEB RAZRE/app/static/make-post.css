@@ -1,0 +1,152 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#sight-title{
+    color: #A30CC2;
+    background: radial-gradient(white, #ACFFFF);
+    text-align: center;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 4vh;
+    margin-bottom: 10px;
+}
+.post-text, .post-title{
+  width: 90vw;
+  margin-left: 5vw;
+  border-color: cyan;
+  background-color: white;
+  border-width: 2px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+.post-text{
+  resize: vertical;
+}
+h1{
+  text-align: center;
+  cursor: default;
+}
+.upload-button{
+  width: 90vw;
+  margin-left: 5vw;
+  border-color: cyan;
+  border-width: 2px;
+  border-radius: 10px;
+  background-color: cyan;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 5vw;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.another-buttons{
+    position: fixed;
+    top: 90vh;
+    left: 40vw;
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 210px;
+    gap: 10px;
+    background-color: white;
+}
+.button img{
+    width: 40px;
+}
+.button{
+    border: none;
+    background-color: white;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.buttons-bg{
+    position: fixed;
+    top: 85vh;
+    width: 100vw;
+    height: 15vh;
+    background-color: white;
+}
+.button::after{
+  content: attr(data-label);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.button:hover::after{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* #uploadBtn{
+  width: 5vw;
+  margin-left: 5vw;
+  border-color: cyan;
+  border-width: 2px;
+  border-radius: 10px;
+  background-color: cyan;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+Скрываем настоящий input
+#fileInput {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+Красивая кнопка "+"
+.upload-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; круглая
+    background-color: cyan;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+    background-color: #0056b3;
+} */
+
+#phone{
+  display: none;
+  font-size: 9px;
+}
+
+@media screen and (max-width: 512px) {
+  #phone {
+    display: block;
+  }
+}

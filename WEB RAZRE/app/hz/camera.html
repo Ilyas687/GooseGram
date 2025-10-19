@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Фотоаппарат</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    video, canvas {
+      border: 2px solid #333;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 Онлайн-камера</h1>
+
+  <video id="video" autoplay playsinline></video>
+  <button id="snap">Сделать фото</button>
+  <canvas id="canvas"></canvas>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const snapBtn = document.getElementById('snap');
+    const ctx = canvas.getContext('2d');
+
+    // Подключаемся к камере
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(err => {
+        alert("Ошибка доступа к камере: " + err);
+      });
+
+    // Кнопка "сделать фото"
+    snapBtn.addEventListener('click', () => {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    });
+  </script>
+</body>
+</html>

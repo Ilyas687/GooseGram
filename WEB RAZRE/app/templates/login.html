@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница регистрации</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Kablammo&family=Pacifico&family=Press+Start+2P&family=Rubik+Bubbles&family=Rubik+Dirt&family=Rubik+Doodle+Shadow&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/login.js"></script>
+</head>
+<body>
+    <h1 id="sight-title">Goosegram</h1>
+
+    <div>
+        <p id="glav"><b>Страница для регистрации</b></p>
+        <div class="form" id="ajax_form">
+            <input type="text" name="username" class="ajax_input" placeholder="Придумайте никнейм" required>
+            <input type="email" name="email" class="ajax_input" placeholder="Введите эл. почту" required>
+            <input type="password" name="password" class="ajax_input" placeholder="Придумайте пароль" required>
+            <button class="btn-53">
+                <div class="original">Зарегистрироваться</div>
+                <div class="letters">
+                    <span>З</span>
+                    <span>а</span>
+                    <span>р</span>
+                    <span>е</span>
+                    <span>г</span>
+                    <span>и</span>
+                    <span>с</span>
+                    <span>т</span>
+                    <span>р</span>
+                    <span>и</span>
+                    <span>р</span>
+                    <span>о</span>
+                    <span>в</span>
+                    <span>а</span>
+                    <span>т</span>
+                    <span>ь</span>
+                    <span>с</span>
+                    <span>я</span>
+                </div>
+            </button>
+        </div>
+        <form action="/sight/" method="post" class="form" id="code_form">
+            <input type="text" name="code" id="code1" placeholder="Напишите полученный код" required class="code_form_input">
+            <input type="hidden" name="email1" id="email2" class="code_form_input">
+            <button class="btn-53">
+                <div class="original">Подтвердить</div>
+                <div class="letters">
+                    <span>П</span>
+                    <span>о</span>
+                    <span>д</span>
+                    <span>т</span>
+                    <span>в</span>
+                    <span>е</span>
+                    <span>р</span>
+                    <span>д</span>
+                    <span>и</span>
+                    <span>т</span>
+                    <span>ь</span>
+                </div>
+            </button>
+        </form>
+        <button class="blue">Если у вас уже есть аккаунт, нажмите сюда</button>
+        <form action="/login/" method="post" class="form" id="login_form">
+            <input type="email" name="email3" class="login_form_input" placeholder="Введите свою эл. почту" required>
+            <input type="password" name="password1" class="login_form_input" placeholder="Введите свой пароль" required>
+            <button class="btn-53">
+                <div class="original">Войти</div>
+                <div class="letters">
+                    <span>В</span>
+                    <span>о</span>
+                    <span>й</span>
+                    <span>т</span>
+                    <span>и</span>
+                </div>
+            </button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать пост</title>
+    <link rel="stylesheet" href="/static/account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Kablammo&family=Pacifico&family=Press+Start+2P&family=Rubik+Bubbles&family=Rubik+Dirt&family=Rubik+Doodle+Shadow&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/account.js"></script>
+</head>
+</head>
+<body>
+    <h1 id="sight-title">Goosegram</h1>
+
+    <div class="accountt">
+        <div class="account-info">
+            <img src="/static/favicon.png" id="account-img1" class="account-img" alt="" width="70" height="70">
+            <div class="account">
+                <h1 class="account-nickname"></h1>
+                <p class="account-posts"></p>
+            </div>
+        </div>
+        <div class="edit_profile">
+            <input type="file" id="change_profile_img_input" accept="image/*" style="display: none;">
+            <a id="change_profile_img">Изменить аватарку</a>
+        </div>
+    </div>
+    <h1 class="postss">Все посты:</h1>
+    
+    <div class="posts"></div>
+
+    <div class="buttons-bg">
+        <div class="another-buttons">
+            <form action="/login">
+                <button class="button" style="border-right: 1px solid black;" data-label="Главная страница">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAZlBMVEUAAAD///+/v7+JiYlZWVkrKyv39/dhYWHg4OCqqqq0tLTQ0NBeXl4jIyPw8PBSUlI8PDxGRkbp6ekxMTGenp7Ly8vY2NgWFhbCwsLz8/N4eHhvb2+SkpIbGxujo6OAgIBqampLS0tE7FX5AAAESklEQVR4nO3daXIaMRCG4Y7NMjb7YjBeYnz/S6aI4wKDekZSLyOlvvcAGT1/qJ6OwPTLt2bTOD+RfB93R0R3vo/0FW7p1Nb1ma7CF/rqxfOhjsLDgr5bHPwe6ydshnRu6Pd54yac0M8mXg/2Ej7QdQ9OT3YS3t8Aie59Hu0jHAeARGOXZ3sI58sgkGg5d3i6g3DH+E7t7B9vL7xrAXqMcObCbSvQYYSzFr52AIlejU9gKzysOoFEK9sRzlTYbCKARLavjJbCpyjfqSfDUxgKbwc1PsMRzk4YGtT47EY4K+EoPKjxjUdGJzESzuM+Yy7bGI1wNsK2QY3PZoQzET5mAYkeLQ5jIXzLBBK9GZzGQNg9qPEZjHDqwnnMoMa3Uv+80RY27yIg0bv2CKcsfBb6Tj3rHklX+FsBSPRb9Uyqwg8VINGH5qEUhaOBEpBooDjC6QnX6YMa32atdi414fXWXpra1l9LmDuo8WmNcErC/EGNT2mE0xFODYBEU5WzaQiFgxqfyginINzNjIBEM4VXRrlQY1Djk49wYmHX1l6aeOsvFWoNanzSEU4mHC26TyhuIRvhRMK13WfMZTPRCCcRxm/tpUm2/gJhytZemmDrny9M29pLy9/6ZwtTt/bSsi9uZArZ6xV25V7cyBPu9u5Aon3eCJclbL9eYVfWxY0cofWgxpczwmUIX7pPYlbG3dtkocugxpc+wqUKG59BjW+WuvVPFPoNanyJI1ya0HNQ40sb4ZKE9i+DcSW9MqYI9bb20gYmwrX/oMa3jH9ljBb2MqjxxY9wscK+BjW+2BEuUmixtZcWufWPE0quV9gVd3EjRjiy2tpLW8WMcBHCpqzPmMv2ESNct9B2ay+te+vfKdS5XmFX58WNLmEpgxpf1wjXLuz5ZTCujlfGVuF62P3vF9CwdYRrE07K/RD92b7t4kaLUP96hV0tFzd4YYmDGh8/wrHCY99nTuyYKIz6wlJZcV+fCgubvo+bVXiECwrLHtT4giNcSNjf1l5aaOsfEPa5tZcW2PrfCKsY1PhuR7hrYeSXIsvt5uuaV0Lte7B9NGkT1jSo8T3yQt/rFXbdc8Jj3ydT6xgUHkra2ktbHm6FeV+KLLfdtbC8rb20u5/Cegc1vu2lsPyNWk4fZ+Go7+sHNs1GZ2EdO7XUhhBWH4T1B2H9QVh/ENYfhPUHYf1BWH+Xwv//Hf84mP5t/K/Pvg+X1ef38b8wg+NZeFOd/wkcvsUXFta5PQ3fi4awpiCEsPwghLD8IISw/CCEsPwghLD8IISw/CCEsPwghLD8IISw/CCEsPwghLD8IISw/CCEsPwghLD8IISw/HyFm+kgran8Z2N8hel/+E7++3C+wvS/CyP/YRUIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh9BH+AfsRYB6iYbbFAAAAAElFTkSuQmCC" alt="">
+                    <p id="phone">Главная страница</p>
+                </button>
+            </form>
+            <form action="/make-post/">
+                <button class="button" style="border-right: 1px solid black;" data-label="Создать свой пост">
+                    <img src="data:image/png;base64,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" alt="">
+                    <p id="phone">Создать свой пост</p>
+                </button>
+            </form>
+            <form action="/subs/">
+                <button class="button" style="border-right: 1px solid black;" data-label="Подписки">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0z7NpXiJe0ZSba_I3tDUt2eKNv6IZVPTvfg&s" alt="">
+                    <p id="phone">Подписки</p>
+                </button>
+            </form>
+            <form action="/account/">
+                <button class="button" data-label="Аккаунт, недавно просмотренные посты">
+                    <img src="data:image/png;base64,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" alt="">
+                    <p id="phone">Аккаунт, недавно просмотренные посты</p>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

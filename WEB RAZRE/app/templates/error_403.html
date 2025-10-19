@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ошибка 403 — Доступ запрещён</title>
+    <style>
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        margin: 0;
+        }
+        .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+        font-size: 36px;
+        color: #f0ad4e;
+        margin-bottom: 16px;
+        }
+        p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        }
+        ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px auto;
+        max-width: 400px;
+        text-align: left;
+        }
+        ul li {
+        margin: 10px 0;
+        padding-left: 25px;
+        position: relative;
+        font-size: 17px;
+        }
+        ul li::before {
+        content: "🔒";
+        position: absolute;
+        left: 0;
+        }
+        a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+        .cat-image {
+        margin: 30px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        }
+        .footer {
+        margin-top: 30px;
+        font-size: 15px;
+        color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚫 Ошибка 403</h1>
+        <h2>Доступ запрещён</h2>
+        <p>У вас нет прав для просмотра этой страницы. Доступ к ресурсу ограничен.</p>
+
+        <p><strong>Возможные причины:</strong></p>
+        <ul>
+            <li>Вы не авторизованы или не имеете нужных прав</li>
+            <li>Страница доступна только определённым пользователям (администраторам, сотрудникам и т.п.)</li>
+            <li>Система безопасности заблокировала доступ</li>
+        </ul>
+
+        <p><strong>Что вы можете сделать?</strong></p>
+        <ul>
+            <li><strong><a href="/">Войдите в аккаунт</a></strong>, если у вас есть доступ</li>
+            <li><strong><a href="/login/">Вернитесь на главную страницу</a></strong></li>
+            <li>Проверьте, правильно ли вы используете сервис</li>
+        </ul>
+
+        <!-- Котик с замком — символ ограничения -->
+        <img src="https://http.cat/403" alt="Доступ запрещён — кот с замком" class="cat-image" />
+
+        <div class="footer">
+            <p>Иногда важно, кто и куда заходит.<br>
+            Спасибо, что уважаете границы безопасности. 🔐</p>
+        </div>
+    </div>
+</body>
+</html>

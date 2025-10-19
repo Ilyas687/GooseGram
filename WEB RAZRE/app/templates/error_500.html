@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ошибка 500 — Внутренняя ошибка сервера</title>
+    <style>
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        margin: 0;
+        }
+        .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+        font-size: 36px;
+        color: #d9534f;
+        margin-bottom: 16px;
+        }
+        p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        }
+        ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px auto;
+        max-width: 400px;
+        text-align: left;
+        }
+        ul li {
+        margin: 10px 0;
+        padding-left: 25px;
+        position: relative;
+        font-size: 17px;
+        }
+        ul li::before {
+        content: "🔧";
+        position: absolute;
+        left: 0;
+        }
+        a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+        .cat-image {
+        margin: 30px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        }
+        .footer {
+        margin-top: 30px;
+        font-size: 15px;
+        color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💥 Ошибка 500</h1>
+        <h2>Внутренняя ошибка сервера</h2>
+        <p>Что-то пошло не так на нашей стороне. Мы уже работаем над исправлением.</p>
+
+        <p><strong>Что это значит?</strong></p>
+        <ul>
+        <li>Сервер столкнулся с непредвиденной проблемой</li>
+        <li>Возможно, временный сбой в работе приложения или базы данных</li>
+        <li>Ошибка не связана с вашими действиями</li>
+        </ul>
+
+        <p><strong>Что вы можете сделать?</strong></p>
+        <ul>
+        <li><strong>Обновите страницу</strong> через несколько минут</li>
+        <li><strong><a href="/login/">Вернитесь на главную страницу</a></strong></li>
+        <li>Попробуйте зайти позже — мы всё починим</li>
+        </ul>
+
+        <!-- Котик с гаечным ключом — символ "что-то сломалось" -->
+        <img src="https://www.qmedia.by/assets/images/blog/http/500.png" alt="Ошибка сервера — кот с гаечным ключом" class="cat-image" />
+
+        <div class="footer">
+        <p>Простите за неудобства.<br>
+        Наши инженеры уже бегут к серверам с отвёртками. 🛠️</p>
+        </div>
+    </div>
+</body>
+</html>
